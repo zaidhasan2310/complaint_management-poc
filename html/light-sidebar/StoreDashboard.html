@@ -1,0 +1,769 @@
+﻿<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<!-- Mirrored from wrappixel.com/demos/admin-templates/xtreme-admin/html/light-sidebar/index3.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Mar 2019 07:57:06 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon.png">
+    <title>Complaint Management System</title>
+    <!-- Custom CSS -->
+    <link href="../../assets/libs/morris.js/morris.css" rel="stylesheet">
+    <link href="../../assets/extra-libs/datatables.net-bs4/css/dataTables.bootstrap4.css" rel="stylesheet">
+
+    <!--c3 CSS -->
+    <link href="../../assets/extra-libs/c3/c3.min.css" rel="stylesheet">
+    <link href="../../assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
+    <link href="../../assets/extra-libs/css-chart/css-chart.css" rel="stylesheet">
+    <link href="../../assets/libs/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet" />
+    <link href="../../assets/extra-libs/calendar/calendar.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link href="../../dist/css/style.min.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <header class="topbar">
+            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+                <div class="navbar-header">
+                    <!-- This is for the sidebar toggle which is visible on mobile only -->
+                    <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
+                    <!-- ============================================================== -->
+                    <!-- Logo -->
+                    <!-- ============================================================== -->
+                    <a class="navbar-brand" href="StoreDashboard.html">
+                        <!-- Logo icon -->
+                        <b class="logo-icon">
+                            <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                            <!-- Dark Logo icon -->
+                            <img src="../../assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
+                            <!-- Light Logo icon -->
+                            <img src="../../assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
+                        </b>
+                        <!--End Logo icon -->
+                        <!-- Logo text -->
+                        <span class="logo-text">
+                            <!-- dark Logo text -->
+                            <img src="../../assets/images/logo-text.png" alt="homepage" class="dark-logo" />
+                            <!-- Light Logo text -->
+                            <img src="../../assets/images/logo-light-text.png" class="light-logo" alt="homepage" />
+                        </span>
+                    </a>
+                    <!-- ============================================================== -->
+                    <!-- End Logo -->
+                    <!-- ============================================================== -->
+                    <!-- ============================================================== -->
+                    <!-- Toggle which is visible on mobile only -->
+                    <!-- ============================================================== -->
+                    <a class="topbartoggler d-block d-md-none waves-effect waves-light" href="javascript:void(0)" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="ti-more"></i></a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse collapse" id="navbarSupportedContent">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav float-left mr-auto">
+                        <li class="nav-item d-none d-md-block"><a class="nav-link sidebartoggler waves-effect waves-light" href="javascript:void(0)" data-sidebartype="mini-sidebar"><i class="mdi mdi-menu font-24"></i></a></li>
+
+                        <!-- ============================================================== -->
+                        <!-- Search -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item search-box">
+                            <a class="nav-link waves-effect waves-dark" href="javascript:void(0)"><i class="ti-search"></i></a>
+                            <form class="app-search position-absolute">
+                                <input type="text" class="form-control" placeholder="Search &amp; enter"> <a class="srh-btn"><i class="ti-close"></i></a>
+                            </form>
+                        </li>
+                    </ul>
+                    <!-- ============================================================== -->
+                    <!-- Right side toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav float-right">
+
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../../assets/images/users/1.jpg" alt="user" class="rounded-circle" width="31"></a>
+                            <div class="dropdown-menu dropdown-menu-right user-dd animated flipInY">
+                                <span class="with-arrow"><span class="bg-primary"></span></span>
+                                <div class="d-flex no-block align-items-center p-15 bg-primary text-white m-b-10">
+                                    <div class=""><img src="../../assets/images/users/1.jpg" alt="user" class="img-circle" width="60"></div>
+                                    <div class="m-l-10">
+                                        <h4 class="m-b-0">London Store</h4>
+                                        <p class=" m-b-0">londonstore@demo.com</p>
+                                    </div>
+                                </div>
+                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user m-r-5 m-l-5"></i> My Profile</a>
+                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-settings m-r-5 m-l-5"></i> Account Settings</a>
+                                <a class="dropdown-item" href="javascript:void(0)"><i class="fa fa-power-off m-r-5 m-l-5"></i> Logout</a>
+                                <div class="p-l-30 p-10"><a href="javascript:void(0)" class="btn btn-sm btn-success btn-rounded">View Profile</a></div>
+                            </div>
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- User profile and search -->
+                        <!-- ============================================================== -->
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <aside class="left-sidebar">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <!-- User Profile-->
+                        <li>
+                            <!-- User Profile-->
+                            <div class="user-profile d-flex no-block dropdown mt-3">
+                                <div class="user-pic"><img src="../../assets/images/users/1.jpg" alt="users" class="rounded-circle" width="40" /></div>
+                                <div class="user-content hide-menu ml-2">
+                                    <a href="javascript:void(0)" class="" id="Userdd" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <h5 class="mb-0 user-name font-medium">London Store <i class="fa fa-angle-down"></i></h5>
+                                        <span class="op-5 user-email">londonstore@demo.com</span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="Userdd">
+                                        <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user mr-1 ml-1"></i> My Profile</a>
+                                        <a class="dropdown-item" href="javascript:void(0)"><i class="ti-settings mr-1 ml-1"></i> Account Setting</a>
+                                        <a class="dropdown-item" href="javascript:void(0)"><i class="fa fa-power-off mr-1 ml-1"></i> Logout</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End User Profile-->
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="StoreDashboard.html" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Dashboard</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="NewComplaint.html" aria-expanded="false"><i class="mdi mdi-receipt"></i><span class="hide-menu">New Complaint</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="StoreComplaints.html" aria-expanded="false"><i class="mdi mdi-code-equal"></i><span class="hide-menu">Complaint Addressal</span></a></li>
+
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="StoreLogin.html" aria-expanded="false"><i class="mdi mdi-directions"></i><span class="hide-menu">Log Out</span></a></li>
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <div class="page-breadcrumb">
+                <div class="row">
+                    <div class="col-5 align-self-center">
+                        <h4 class="page-title">Dashboard</h4>
+                        <div class="d-flex align-items-center">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-7 align-self-center">
+                        <div class="d-flex no-block justify-content-end align-items-center">
+                            <div class="m-r-10">
+                                <div class="lastmonth"></div>
+                            </div>
+                            <div class="">
+                                <small>LAST MONTH</small>
+                                <h4 class="text-info m-b-0 font-medium">56</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Complaints</h4>
+                                <h5 class="card-subtitle">Overview of Pending Complaints</h5>
+                                <div class="table-responsive m-t-20">
+                                    <table id="cc-table" class="table table-bordered m-b-20" data-page-length='10'>
+                                        <thead>
+                                            <tr class="bg-light">
+                                                <th>#</th>
+                                                <th>Complaint ID </th>
+                                                <th>Product </th>
+                                                <th>Purchase Date</th>
+                                                <th>Customer Name</th>
+                                                <th>Customer Contact No</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>90739</td>
+                                                <td>
+                                                    <p>Refrigerator</p>
+                                                </td>
+                                                <td>
+                                                    <p>05/05/2019</p>
+                                                </td>
+                                                <td>
+                                                    <p>Samantha	White</p>
+                                                </td>
+                                                <td><p>07890 123456</p></td>
+
+                                                <td class="no-wrap">
+                                                    <select class="form-control dropdown_change">
+                                                        <option>
+                                                            --Select--
+                                                        </option>
+                                                        <option>
+                                                            Verify
+                                                        </option>
+                                                        <option>
+                                                            Reject
+                                                        </option>
+                                                    </select>
+                                                    <a alt="alert" style="display:none;color:white;" id="sa-warning-complaint-close" class="model_img btn btn-info waves-effect waves-light">Save</a>
+                                                    <a alt="alert" style="display:none;color:white;" id="sa-warning-complaint-reject" class="model_img btn btn-info waves-effect waves-light">Save</a>
+                                                    <span data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" style="display:none;cursor:pointer;" class="btnTrigger label label-success"><i class="fa fa-chevron-up"></i> Forward</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>45239</td>
+                                                <td>
+                                                    <p>Washing Machine</p>
+                                                </td>
+                                                <td>
+                                                    <p>11/06/2019</p>
+                                                </td>
+                                                <td>
+                                                    <p>
+                                                        Robert Allan
+                                                    </p>
+                                                </td>
+                                                <td><p>07890 123456</p></td>
+
+                                                <td class="no-wrap">
+                                                    <select class="form-control dropdown_change">
+                                                        <option>
+                                                            --Select--
+                                                        </option>
+                                                        <option>
+                                                            Verify
+                                                        </option>
+                                                        <option>
+                                                            Reject
+                                                        </option>
+                                                    </select>
+                                                    <span data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" style="display:none;cursor:pointer;" class="btnTrigger label label-success"><i class="fa fa-chevron-up"></i> Forward</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>72739</td>
+                                                <td>
+                                                    <p>Sofa</p>
+                                                </td>
+                                                <td>
+                                                    <p>13/05/2019</p>
+                                                </td>
+                                                <td>
+                                                    <p>
+                                                        Cyrus Black
+                                                    </p>
+                                                </td>
+                                                <td><p>07890 123456</p></td>
+                                                <td class="no-wrap">
+                                                    <select class="form-control dropdown_change">
+                                                        <option>
+                                                            --Select--
+                                                        </option>
+                                                        <option>
+                                                            Verify
+                                                        </option>
+                                                        <option>
+                                                            Reject
+                                                        </option>
+                                                    </select>
+
+
+                                                    <span data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" style="display:none;cursor:pointer;" class="btnTrigger label label-success"><i class="fa fa-chevron-up"></i> Forward</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>33219</td>
+                                                <td>
+                                                    <p>Refrigerator</p>
+                                                </td>
+                                                <td>
+                                                    <p>05/05/2019</p>
+                                                </td>
+                                                <td>
+                                                    <p>
+                                                        Jane McDonald
+                                                    </p>
+                                                </td>
+                                                <td><p>07890 123456</p></td>
+                                                <td class="no-wrap">
+                                                    <select class="form-control dropdown_change">
+                                                        <option>
+                                                            --Select--
+                                                        </option>
+                                                        <option>
+                                                            Verify
+                                                        </option>
+                                                        <option>
+                                                            Reject
+                                                        </option>
+                                                    </select>
+                                                    <span data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" style="display:none;cursor:pointer;" class="btnTrigger label label-success"><i class="fa fa-chevron-up"></i> Forward</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>98739</td>
+                                                <td>
+                                                    <p>Washing Machine</p>
+                                                </td>
+                                                <td>
+                                                    <p>11/06/2019</p>
+                                                </td>
+                                                <td>
+                                                    <p>
+                                                        Jessica	McDonald
+                                                    </p>
+                                                </td>
+                                                <td><p>07890 123456</p></td>
+                                                <td class="no-wrap">
+                                                    <select class="form-control dropdown_change">
+                                                        <option>
+                                                            --Select--
+                                                        </option>
+                                                        <option>
+                                                            Verify
+                                                        </option>
+                                                        <option>
+                                                            Reject
+                                                        </option>
+                                                    </select>
+                                                    <span data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" style="display:none;cursor:pointer;" class="btnTrigger label label-success"><i class="fa fa-chevron-up"></i> Forward</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td>90239</td>
+                                                <td>
+                                                    <p>Sofa</p>
+                                                </td>
+                                                <td>
+                                                    <p>13/05/2019</p>
+                                                </td>
+                                                <td>
+                                                    <p>
+                                                        Beth Cooper
+                                                    </p>
+                                                </td>
+                                                <td><p>07890 123456</p></td>
+                                                <td class="no-wrap">
+                                                    <select class="form-control dropdown_change">
+                                                        <option>
+                                                            --Select--
+                                                        </option>
+                                                        <option>
+                                                            Verify
+                                                        </option>
+                                                        <option>
+                                                            Reject
+                                                        </option>
+                                                    </select>
+                                                    <span data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" style="display:none;cursor:pointer;" class="btnTrigger label label-success"><i class="fa fa-chevron-up"></i> Forward</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>7</td>
+                                                <td>92239</td>
+                                                <td>
+                                                    <p>Refrigerator</p>
+                                                </td>
+                                                <td>
+                                                    <p>05/05/2019</p>
+                                                </td>
+                                                <td>
+                                                    <p>
+                                                        Harry Greene
+                                                    </p>
+                                                </td>
+                                                <td><p>07890 123456</p></td>
+                                                <td class="no-wrap">
+                                                    <select class="form-control dropdown_change">
+                                                        <option>
+                                                            --Select--
+                                                        </option>
+                                                        <option>
+                                                            Verify
+                                                        </option>
+                                                        <option>
+                                                            Reject
+                                                        </option>
+                                                    </select>
+                                                    <span data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" style="display:none;cursor:pointer;" class="btnTrigger label label-success"><i class="fa fa-chevron-up"></i> Forward</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>87739</td>
+                                                <td>
+                                                    <p>Washing Machine</p>
+                                                </td>
+                                                <td>
+                                                    <p>11/06/2019</p>
+                                                </td>
+                                                <td>
+                                                    <p>
+                                                        Brandon	Hudson
+                                                    </p>
+                                                </td>
+                                                <td><p>07890 123456</p></td>
+                                                <td class="no-wrap">
+                                                    <select class="form-control dropdown_change">
+                                                        <option>
+                                                            --Select--
+                                                        </option>
+                                                        <option>
+                                                            Verify
+                                                        </option>
+                                                        <option>
+                                                            Reject
+                                                        </option>
+                                                    </select>
+                                                    <span data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" style="display:none;cursor:pointer;" class="btnTrigger label label-success"><i class="fa fa-chevron-up"></i> Forward</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>9</td>
+                                                <td>91139</td>
+                                                <td>
+                                                    <p>Sofa</p>
+                                                </td>
+                                                <td>
+                                                    <p>13/05/2019</p>
+                                                </td>
+                                                <td>
+                                                    <p>
+                                                        Rebecca McDonald
+                                                    </p>
+                                                </td>
+                                                <td><p>07890 123456</p></td>
+                                                <td class="no-wrap">
+                                                    <select class="form-control dropdown_change">
+                                                        <option>
+                                                            --Select--
+                                                        </option>
+                                                        <option>
+                                                            Verify
+                                                        </option>
+                                                        <option>
+                                                            Reject
+                                                        </option>
+                                                    </select>
+                                                    <span data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" style="display:none;cursor:pointer;" class="btnTrigger label label-success"><i class="fa fa-chevron-up"></i> Forward</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>10</td>
+                                                <td>10739</td>
+                                                <td>
+                                                    <p>Refrigerator</p>
+                                                </td>
+                                                <td>
+                                                    <p>05/05/2019</p>
+                                                </td>
+                                                <td>
+                                                    <p>
+                                                        Warren Newman
+                                                    </p>
+                                                </td>
+                                                <td><p>07890 123456</p></td>
+                                                <td class="no-wrap">
+                                                    <select class="form-control dropdown_change">
+                                                        <option>
+                                                            --Select--
+                                                        </option>
+                                                        <option>
+                                                            Verify
+                                                        </option>
+                                                        <option>
+                                                            Reject
+                                                        </option>
+                                                    </select>
+                                                    <span data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" style="display:none;cursor:pointer;" class="btnTrigger label label-success"><i class="fa fa-chevron-up"></i> Forward</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>11</td>
+                                                <td>65739</td>
+                                                <td>
+                                                    <p>Washing Machine</p>
+                                                </td>
+                                                <td>
+                                                    <p>11/06/2019</p>
+                                                </td>
+                                                <td>
+                                                    <p>
+                                                        Colin Martin
+                                                    </p>
+                                                </td>
+                                                <td><p>07890 123456</p></td>
+                                                <td class="no-wrap">
+                                                    <select class="form-control dropdown_change">
+                                                        <option>
+                                                            --Select--
+                                                        </option>
+                                                        <option>
+                                                            Verify
+                                                        </option>
+                                                        <option>
+                                                            Reject
+                                                        </option>
+                                                    </select>
+                                                    <span data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" style="display:none;cursor:pointer;" class="btnTrigger label label-success"><i class="fa fa-chevron-up"></i> Forward</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>12</td>
+                                                <td>76739</td>
+                                                <td>
+                                                    <p>Sofa</p>
+                                                </td>
+                                                <td>
+                                                    <p>13/05/2019</p>
+                                                </td>
+                                                <td>
+                                                    <p>Claire Harris</p>
+                                                </td>
+                                                <td><p>07890 123456</p></td>
+                                                <td class="no-wrap">
+                                                    <select class="form-control dropdown_change">
+                                                        <option>
+                                                            --Select--
+                                                        </option>
+                                                        <option>
+                                                            Verify
+                                                        </option>
+                                                        <option>
+                                                            Reject
+                                                        </option>
+                                                    </select>
+                                                    <span data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" style="display:none;cursor:pointer;" class="btnTrigger label label-success"><i class="fa fa-chevron-up"></i> Forward</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title" id="exampleModalLabel1">Assign Complaint:</h4>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form>
+                                                        <div class="form-group">
+                                                            <label for="recipient-name" class="control-label">Complaint ID:</label>
+                                                            <span>90739</span>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="recipient-name" class="control-label">Select Assignee:</label>
+                                                            <select class="form-control" id="recipient-name1">
+                                                                <option>--Select--</option>
+                                                                <option>Mr. John Robert</option>
+                                                                <option>Mr. Steve Walter</option>
+                                                                <option>Mr. Tommy Evans</option>
+                                                                <option>Mr. Edward Carter</option>
+                                                            </select>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Assign & Send message</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- Calendar, Poll -->
+                <!-- ============================================================== -->
+                <div class="row">
+                    <!-- column -->
+                    <div class="col-sm-12 col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Schedule of Month</h4>
+                            </div>
+                            <div id="calendar"></div>
+                        </div>
+                    </div>
+                    <!-- column -->
+
+                </div>
+                <!-- BEGIN MODAL -->
+                <div class="modal none-border" id="my-event">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title"><strong>Add Event</strong></h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            </div>
+                            <div class="modal-body"></div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-success save-event waves-effect waves-light">Create event</button>
+                                <button type="button" class="btn btn-danger delete-event waves-effect waves-light" data-dismiss="modal">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal Add Category -->
+                <div class="modal fade none-border" id="add-new-event">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title"><strong>Add</strong> a category</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label class="control-label">Category Name</label>
+                                            <input class="form-control form-white" placeholder="Enter name" type="text" name="category-name" />
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="control-label">Choose Category Color</label>
+                                            <select class="form-control form-white" data-placeholder="Choose a color..." name="category-color">
+                                                <option value="success">Success</option>
+                                                <option value="danger">Danger</option>
+                                                <option value="info">Info</option>
+                                                <option value="primary">Primary</option>
+                                                <option value="warning">Warning</option>
+                                                <option value="inverse">Inverse</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger waves-effect waves-light save-category" data-dismiss="modal">Save</button>
+                                <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END MODAL -->
+            </div>
+            <footer class="footer text-center">
+                All Rights Reserved @ 2019
+            </footer>
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- customizer Panel -->
+    <!-- ============================================================== -->
+
+    <div class="chat-windows"></div>
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="../../assets/libs/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="../../assets/libs/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../../assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- apps -->
+    <script src="../../dist/js/app.min.js"></script>
+    <!-- Theme settings -->
+    <script src="../../dist/js/app.init.light-sidebar.js"></script>
+    <script src="../../dist/js/app-style-switcher.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="../../assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+    <script src="../../assets/extra-libs/sparkline/sparkline.js"></script>
+    <!--Wave Effects -->
+    <script src="../../dist/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="../../dist/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="../../dist/js/custom.min.js"></script>
+    <!--This page JavaScript -->
+    <!--This is for calendar -->
+    <script src="../../assets/libs/moment/min/moment.min.js"></script>
+    <script src="../../assets/libs/fullcalendar/dist/fullcalendar.min.js"></script>
+    <script src="../../dist/js/pages/calendar/cal-init.js"></script>
+    <!--Morris JavaScript -->
+    <script src="../../assets/libs/raphael/raphael.min.js"></script>
+    <script src="../../assets/libs/morris.js/morris.min.js"></script>
+    <script src="../../assets/extra-libs/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../../dist/js/pages/dashboards/dashboard3.js"></script>
+    <script>
+        $(function () {
+            $('#cc-table').DataTable({});
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $(".dropdown_change").change(function () {
+                var selectedOption = $(this).children("option:selected").val();
+                if (selectedOption == 'Verify') {
+                    $('.btnTrigger').click();
+                }
+                else if (selectedOption == 'Reject') {
+                    $('#sa-warning-complaint-reject').click();
+                }
+            });
+        });
+    </script>
+    <script src="../../assets/libs/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <script src="../../assets/libs/sweetalert2/sweet-alert.init.js"></script>
+</body>
+<!-- Mirrored from wrappixel.com/demos/admin-templates/xtreme-admin/html/light-sidebar/index3.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Mar 2019 07:57:10 GMT -->
+</html>
